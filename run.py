@@ -36,3 +36,20 @@ print(" | |          || || ")
 print(" | |         /     \ ")
 print(" ====================== \n")
 
+def start_game():
+    print("You wanna play a game of Hangman?\n")
+    choice = input("Please press 'p' to play a game or 'q' to leave the game\n").lower()
+    if choice == 'p':
+        player_name = input("Hi, glad you chose to play. Please enter your name: \n")
+        print()
+        print(f"Hello {player_name}! Let's start the game, chose a letter...\n")
+        return True
+    elif choice == 'q':
+        print("Ok, thanks for visiting, have a great day!")
+        return False
+    else:
+        print("Invalid choice, please enter 'p' start the game or 'q' to quit the game \n")
+        return start_game()
+
+
+
