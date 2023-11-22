@@ -1,20 +1,20 @@
 
 
-import dictionary # Stores random words
-import hangman # Contains the ascii art for the Hangman
-import random # Lets us get a random word of the ones stored in dictionary
-from rich import print # Lets us choose different colors for our letters
+import dictionary  # Stores random words
+import hangman  # Contains the ascii art for the Hangman
+import random  # Lets us get a random word of the ones stored in dictionary
+from rich import print  # Lets us choose different colors for our letters
 
 # Welcoming ASCii art
 print("Welcome to: \n")
 print()
-print("[bold green] __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.[/bold green]")
-print("[bold green]|  |  |  |     /   \     |  \ |  |  /  _____||   \/   |     /   \     |  \ |  |[/bold green]")
-print("[bold green]|  |__|  |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |   \|  |[/bold green]") 
-print("[bold green]|   __   |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   |  . `  |[/bold green]") 
-print("[bold green]|  |  |  |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  |  |\   |[/bold green]") 
-print("[bold green]|__|  |__| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |__| \__|[/bold green]")
-print("[bold green]===============================================================================[/bold green]\n")
+print("[green] __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.[/green]")
+print("[green]|  |  |  |     /   \     |  \ |  |  /  _____||   \/   |     /   \     |  \ |  |[/green]")
+print("[green]|  |__|  |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |   \|  |[/green]") 
+print("[green]|   __   |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   |  . `  |[/green]") 
+print("[green]|  |  |  |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  |  |\   |[/green]") 
+print("[green]|__|  |__| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |__| \__|[/green]")
+print("[green]===============================================================================[/green]\n")
 
 print(" ___________.._______ ")
 print("| .__________))______| ")
@@ -100,4 +100,18 @@ if start_game():
         # Put wrong guesses in a list
         if wrong_guesses:
             guessed_letters.append(guess)
+
+        if not "_" in word:
+            game_over = True
+            print("\nYay, you made it.... Great job!!")
+            print("         ,,, ")
+            print("        (o o) ")
+            print("----oOO--( )--OOo---- ")
+        elif len(guessed_letters) == len(hangman.hangmans) -1:
+            game_over = True
+            print("\nSorry, you lost... The word was: " + "".join(answer))
+            print("       \|||/ ")
+            print("       (o o) ")
+            print("----ooO-(_)-Ooo---- ")
+
 
