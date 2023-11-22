@@ -3,18 +3,17 @@
 import dictionary  # Stores random words
 import hangman  # Contains the ascii art for the Hangman
 import random  # Lets us get a random word of the ones stored in dictionary
-from rich import print  # Lets us choose different colors for our letters
 
 # Welcoming ASCii art
 print("Welcome to: \n")
 print()
-print("[green] __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.[/green]")
-print("[green]|  |  |  |     /   \     |  \ |  |  /  _____||   \/   |     /   \     |  \ |  |[/green]")
-print("[green]|  |__|  |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |   \|  |[/green]") 
-print("[green]|   __   |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   |  . `  |[/green]") 
-print("[green]|  |  |  |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  |  |\   |[/green]") 
-print("[green]|__|  |__| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |__| \__|[/green]")
-print("[green]===============================================================================[/green]\n")
+print(" __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
+print("|  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |")
+print("|  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
+print("|   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |")
+print("|  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
+print("|__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|")
+print("====================================================================\n")
 
 print(" ___________.._______ ")
 print("| .__________))______| ")
