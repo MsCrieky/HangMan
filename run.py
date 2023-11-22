@@ -9,14 +9,12 @@ while True:
 
     # Welcoming ASCii art
     print("Welcome to: \n")
-    print()
     print(" __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
     print("|  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |")
     print("|  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
     print("|   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |")
     print("|  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
     print("|__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|")
-    print("====================================================================\n")
 
     print(" ___________.._______ ")
     print("| .__________))______| ")
@@ -78,7 +76,7 @@ while True:
         # Print out made guesses
         while not game_over:
             if len(guessed_letters) > 0:
-                print("\nYou guessed these letters so far: " + " ".join(guessed_letters))
+                print("\nYou have guessed these letter so far: " + " ".join(guessed_letters))
 
             # Printing out the picture of hangman if guess is wrong
             print("\n".join(hangman.hangmans[len(guessed_letters)]))
@@ -121,7 +119,11 @@ while True:
 
         # Ask if the player wants to play again
         if not play_again():
-            print("Thank you for this time")
+            print("Thank you for playing, see you soon again!!!\n")
+            print()
+            print("                      \|/ ")
+            print("                    ^-O-O-^ ")    
+            print("------------------ooO--U--Ooo-----")
             break # Exit the loop if they player chose to end 
 
 
