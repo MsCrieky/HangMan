@@ -71,7 +71,7 @@ while True:
             print("".join(word))
 
             # Lets the player chose a letter of choice he thinks is in the word
-            guess = input("\nPlease, guess a letter: ")
+            guess = input("\nPlease, guess a letter: \n")
 
             # Keep the wrong guesses
             wrong_guesses = True
@@ -94,16 +94,18 @@ while True:
                 game_over = True
                 print("-----------------------------------\n")
                 print("\nYay, you made it.... Great job!!")
+                print()
                 print("         ,,, ")
                 print("        (o o) ")
-                print("----oOO--( )--OOo---- ")
+                print("----oOO--( )--OOo----\n")
             elif len(guessed_letters) == len(hangman.hangmans) -1:
                 game_over = True
                 print("-------------------------------------------------\n")
                 print("\nSorry, you lost... The word was: " + "".join(answer))
+                print()
                 print("       \|||/ ")
                 print("       (o o) ")
-                print("----ooO-(_)-Ooo---- ")
+                print("----ooO-(_)-Ooo----\n")
 
         # Ask if the player wants to play again
         if not play_again():
@@ -112,7 +114,7 @@ while True:
             print()
             print("                      \|/ ")
             print("                    ^-O-O-^ ")    
-            print("------------------ooO--U--Ooo-----")
+            print("------------------ooO--U--Ooo-----\n")
             break # Exit the loop if they player chose to end 
 
 
