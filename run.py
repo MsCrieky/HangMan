@@ -1,10 +1,11 @@
 
 
-import dictionary
-import hangman
-import random
-from rich import print
+import dictionary # Stores random words
+import hangman # Contains the ascii art for the Hangman
+import random # Lets us get a random word of the ones stored in dictionary
+from rich import print # Lets us choose different colors for our letters
 
+# Welcoming ASCii art
 print("Welcome to: \n")
 print()
 print("[bold green] __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.[/bold green]")
