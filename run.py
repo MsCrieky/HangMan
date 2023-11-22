@@ -77,6 +77,9 @@ if start_game():
         if len(guessed_letters) > 0:
             print("\nYou guessed these letters so far: " + " ".join(guessed_letters))
 
+        # Printing out the picture of hangman if guess is wrong
+        print("\n".join(hangman.hangmans[len(guessed_letters)]))
+        
         # Printing out the random word
         print("".join(word))
 
