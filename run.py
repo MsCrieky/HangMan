@@ -21,7 +21,7 @@ while True:
     """
     def start_game():
         print()
-        print("--------------------------------------------------------------")
+        print("______________________________________________________________")
         print("You wanna play a game of Hangman?\n")
         choice = input("Please press 'p' to play a game or 'q' to leave the game\n").lower()
         if choice == 'p':
@@ -60,7 +60,7 @@ while True:
         while not game_over:
             if len(guessed_letters) > 0:
                 print("--------------------------------------------------\n")
-                print("\nYou have guessed these letter so far: " + " ".join(guessed_letters))
+                print("\nYOU HAVE GUESSED THESE LETTERS SO FAR: " + " ".join(guessed_letters))
                 print("--------------------------------------------------\n")
                 print()
 
@@ -92,7 +92,7 @@ while True:
 
             if not "_" in word:
                 game_over = True
-                print("-----------------------------------\n")
+                print("________________________________________\n")
                 print("\nYay, you made it.... Great job!!")
                 print()
                 print("         ,,, ")
@@ -100,7 +100,7 @@ while True:
                 print("----oOO--( )--OOo----\n")
             elif len(guessed_letters) == len(hangman.hangmans) -1:
                 game_over = True
-                print("-------------------------------------------------\n")
+                print("____________________________________________________\n")
                 print("\nSorry, you lost... The word was: " + "".join(answer))
                 print()
                 print("       \|||/ ")
@@ -109,7 +109,7 @@ while True:
 
         # Ask if the player wants to play again
         if not play_again():
-            print("-------------------------------------------------\n")
+            print("__________________________________________________\n")
             print("Thank you for playing, see you soon again!!!\n")
             print()
             print("                      \|/ ")
