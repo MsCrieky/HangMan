@@ -45,6 +45,7 @@ while True:
         if choice == 'p':
             player_name = input("Hi, glad you chose to play. Please enter your name: \n")
             print()
+            print("-------------------------------------------------------------\n")
             print(f"Hello {player_name}! Let's start the game, chose a letter...\n")
             return True
         elif choice == 'q':
@@ -77,6 +78,8 @@ while True:
         while not game_over:
             if len(guessed_letters) > 0:
                 print("\nYou have guessed these letter so far: " + " ".join(guessed_letters))
+                print("--------------------------------------------\n")
+                print()
 
             # Printing out the picture of hangman if guess is wrong
             print("\n".join(hangman.hangmans[len(guessed_letters)]))
