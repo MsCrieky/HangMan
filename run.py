@@ -52,4 +52,25 @@ def start_game():
         return start_game()
 
 
+if start_game():
+    answer = random.choice(dictionary.words)
+    answer = list(answer)
 
+    game_over = False
+
+    # Creates an empty word
+    word = []
+    for i in range(0, len(answer)):
+        if answer[i] == " ":
+            word.append(" ")
+        else:
+            word.append("_")
+
+    guessed_letters = []
+
+    # Print out made guesses
+    while not game_over:
+        if len(guessed_letters) > 0:
+            print("\nYou guessed these letters so far: " + " ".join(guessed_letters))
+
+        
