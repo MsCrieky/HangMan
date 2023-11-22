@@ -73,4 +73,25 @@ if start_game():
         if len(guessed_letters) > 0:
             print("\nYou guessed these letters so far: " + " ".join(guessed_letters))
 
-        
+        # Printing out the random word
+        print("".join(word))
+
+        # Keep the wrong guesses
+        wrong_guesses = True
+
+        # Lets the player chose a letter of choice he thinks is in the word
+        guess = input("\nPlease, guess a letter: ")
+
+        """ 
+        Checks if the guessed letter is in the random word
+        """
+        i = 0
+        for letter in answer:
+            if letter == guess:
+                word[i] = letter
+                wrong_guesses = False
+            i += 1
+
+        # Put wrong guesses in a list
+        if wrong_guesses:
+            guessed letters.append(guess)
