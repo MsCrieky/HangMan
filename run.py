@@ -16,26 +16,6 @@ while True:
     print("|  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
     print("|__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|")
 
-    print(" ___________.._______ ")
-    print("| .__________))______| ")
-    print(" | | / /      || ")
-    print(" | |/ /       || ")
-    print(" | | /        ||.-''. ")
-    print(" | |/         |/  _  \ ")
-    print(" | |          ||  `/,| ")
-    print(" | |          (\\`_.' ")
-    print(" | |         .-`--'. ")
-    print(" | |        /Y . .Y\ ")
-    print(" | |       // |   |\\ ")
-    print(" | |      //  | . | \\ ")
-    print(" | |     ')   |   |  (` ")
-    print(" | |          ||'|| ")
-    print(" | |          || || ")
-    print(" | |          || || ")
-    print(" | |          || || ")
-    print(" | |         /     \ ")
-    print(" ====================== \n")
-
     """
     Start function of the game which lets the player select to play or to quit the game
     """
@@ -77,8 +57,9 @@ while True:
         # Print out made guesses
         while not game_over:
             if len(guessed_letters) > 0:
+                print("--------------------------------------------------\n")
                 print("\nYou have guessed these letter so far: " + " ".join(guessed_letters))
-                print("--------------------------------------------\n")
+                print("--------------------------------------------------\n")
                 print()
 
             # Printing out the picture of hangman if guess is wrong
@@ -109,12 +90,14 @@ while True:
 
             if not "_" in word:
                 game_over = True
+                print("-----------------------------------\n")
                 print("\nYay, you made it.... Great job!!")
                 print("         ,,, ")
                 print("        (o o) ")
                 print("----oOO--( )--OOo---- ")
             elif len(guessed_letters) == len(hangman.hangmans) -1:
                 game_over = True
+                print("-------------------------------------------------\n")
                 print("\nSorry, you lost... The word was: " + "".join(answer))
                 print("       \|||/ ")
                 print("       (o o) ")
@@ -122,6 +105,7 @@ while True:
 
         # Ask if the player wants to play again
         if not play_again():
+            print("-------------------------------------------------\n")
             print("Thank you for playing, see you soon again!!!\n")
             print()
             print("                      \|/ ")
