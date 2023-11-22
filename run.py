@@ -36,6 +36,9 @@ print(" | |          || || ")
 print(" | |         /     \ ")
 print(" ====================== \n")
 
+"""
+Start function of the game which lets the player select to play or to quit the game
+"""
 def start_game():
     print("You wanna play a game of Hangman?\n")
     choice = input("Please press 'p' to play a game or 'q' to leave the game\n").lower()
@@ -51,7 +54,9 @@ def start_game():
         print("Invalid choice, please enter 'p' start the game or 'q' to quit the game \n")
         return start_game()
 
-
+"""
+Here the game starts and the random word is chosen, the player get to chose letter etc
+"""
 if start_game():
     answer = random.choice(dictionary.words)
     answer = list(answer)
@@ -76,11 +81,11 @@ if start_game():
         # Printing out the random word
         print("".join(word))
 
-        # Keep the wrong guesses
-        wrong_guesses = True
-
         # Lets the player chose a letter of choice he thinks is in the word
         guess = input("\nPlease, guess a letter: ")
+
+        # Keep the wrong guesses
+        wrong_guesses = True
 
         """ 
         Checks if the guessed letter is in the random word
@@ -94,4 +99,5 @@ if start_game():
 
         # Put wrong guesses in a list
         if wrong_guesses:
-            guessed letters.append(guess)
+            guessed_letters.append(guess)
+
