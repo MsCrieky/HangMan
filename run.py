@@ -20,6 +20,8 @@ while True:
     Start function of the game which lets the player select to play or to quit the game
     """
     def start_game():
+        print()
+        print("--------------------------------------------------------------")
         print("You wanna play a game of Hangman?\n")
         choice = input("Please press 'p' to play a game or 'q' to leave the game\n").lower()
         if choice == 'p':
