@@ -1,4 +1,4 @@
-from colorama import Fore, Style
+
 
 # Asks the player at the end of the game if he wants to play another game.
 def play_again():
@@ -11,6 +11,7 @@ while True:
     import dictionary  # Stores random words
     import hangman  # Contains the ascii art for the Hangman
     import random  # Lets us get a random word of the ones stored in dictionary
+    from colorama import Fore, Back, Style # Adds colors
 
     # Welcoming ASCii art
     print("Welcome to: \n")
@@ -124,5 +125,3 @@ while True:
             print("                    ^-O-O-^ ")    
             print("------------------ooO--U--Ooo-----\n")
             break # Exit the loop if they player chose to end 
-
-
