@@ -2,6 +2,9 @@
 def play_again():
     return input("Do you fancy another game? (y/n)").lower() == 'y'
 
+"""
+Libraries and imports
+"""
 while True:
     import dictionary  # Stores random words
     import hangman  # Contains the ascii art for the Hangman
@@ -22,6 +25,7 @@ while True:
     def start_game():
         print()
         print("______________________________________________________________")
+        print()
         print("You wanna play a game of Hangman?\n")
         choice = input("Please press 'p' to play a game or 'q' to leave the game\n").lower()
         if choice == 'p':
@@ -52,7 +56,7 @@ while True:
             if answer[i] == " ":
                 word.append(" ")
             else:
-                word.append("_")
+                word.append("_ ")
 
         guessed_letters = []
 
@@ -93,7 +97,7 @@ while True:
             if not "_" in word:
                 game_over = True
                 print("________________________________________\n")
-                print("\nYay, you made it.... Great job!!")
+                print("\nYay, you made it.... you guessed the correct word which was"  + "".join(answer) + "Great job!!")
                 print()
                 print("         ,,, ")
                 print("        (o o) ")
