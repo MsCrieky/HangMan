@@ -97,7 +97,7 @@ while True:
             if not "_ " in word:
                 game_over = True
                 print("________________________________________\n")
-                print("\nYay, you made it.... you guessed the correct word which was "  + "".join(answer) + " Great job!!")
+                print("\nYay, you made it.... you guessed the correct word which was "  + "".join(answer).upper() + " Great job!!")
                 print()
                 print("         ,,, ")
                 print("        (o o) ")
@@ -105,7 +105,7 @@ while True:
             elif len(guessed_letters) == len(hangman.hangmans) -1:
                 game_over = True
                 print("____________________________________________________\n")
-                print("\nSorry, you lost... The word was: " + "".join(answer))
+                print("\nSorry, you lost... The word was: " + "".join(answer).upper())
                 print()
                 print("       \|||/ ")
                 print("       (o o) ")
