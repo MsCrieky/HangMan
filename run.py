@@ -92,7 +92,9 @@ while True:
 
             # Put wrong guesses in a list
             if wrong_guesses:
-                guessed_letters.append(guess)
+                guessed_letters.append(guess.upper())
+
+                guessed_letters_str = ' '.join(f"\033[1;31m{g}\033[0m" for g in guessed_letters)
 
             if not "_ " in word:
                 game_over = True
