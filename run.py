@@ -94,10 +94,10 @@ while True:
             if wrong_guesses:
                 guessed_letters.append(guess)
 
-            if not "_" in word:
+            if not "_ " in word:
                 game_over = True
                 print("________________________________________\n")
-                print("\nYay, you made it.... you guessed the correct word which was"  + "".join(answer) + "Great job!!")
+                print("\nYay, you made it.... you guessed the correct word which was "  + "".join(answer) + " Great job!!")
                 print()
                 print("         ,,, ")
                 print("        (o o) ")
