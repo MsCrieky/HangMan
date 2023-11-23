@@ -9,6 +9,7 @@ while True:
     import dictionary  # Stores random words
     import hangman  # Contains the ascii art for the Hangman
     import random  # Lets us get a random word of the ones stored in dictionary
+    from colorama import Fore, Style # For using colors
 
     # Welcoming ASCii art
     print("Welcome to: \n")
@@ -64,7 +65,7 @@ while True:
         while not game_over:
             if len(guessed_letters) > 0:
                 print("--------------------------------------------------\n")
-                print("\nYOU HAVE GUESSED THESE LETTERS SO FAR: " + " ".join(guessed_letters))
+                print("\nYOU HAVE GUESSED THESE LETTERS SO FAR: ", guessed_letters_str)
                 print("--------------------------------------------------\n")
                 print()
 
@@ -94,7 +95,7 @@ while True:
             if wrong_guesses:
                 guessed_letters.append(guess.upper())
 
-                guessed_letters_str = ' '.join(f"\033[1;31m{g}\033[0m" for g in guessed_letters)
+                guessed_letters_str = ' '.join(f"{Fore.RED}{g}{Style.RESET_ALL}" for g in guessed_letters)
 
             if not "_ " in word:
                 game_over = True
