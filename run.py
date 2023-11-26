@@ -12,7 +12,7 @@ while True:
     import hangman  # Contains the ascii art for the Hangman
     import random  # Lets us get a random word of the ones stored in dictionary
     from colorama import Fore, Back, Style # Adds colors
-    import time
+    import time # Add delay to print out text
 
     def print_slow(text, speed = 0.05):
         for character in text:
@@ -23,7 +23,7 @@ while True:
     # Welcoming ASCii art
     print_slow("Welcome to: \n")
     print_slow(" __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
-    print_slow("|  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |").  
+    print_slow("|  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |")  
     print_slow("|  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
     print_slow("|   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |")
     print_slow("|  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
