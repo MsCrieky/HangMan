@@ -12,15 +12,22 @@ while True:
     import hangman  # Contains the ascii art for the Hangman
     import random  # Lets us get a random word of the ones stored in dictionary
     from colorama import Fore, Back, Style # Adds colors
+    import time
+
+    def print_slow(text, speed = 0.05):
+        for character in text:
+            print(character, end ='', flush = True)
+            time.sleep(speed)
+        print()
 
     # Welcoming ASCii art
-    print("Welcome to: \n")
-    print(" __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
-    print("|  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |")
-    print("|  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
-    print("|   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |")
-    print("|  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
-    print("|__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|")
+    print_slow("Welcome to: \n")
+    print_slow(" __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
+    print_slow("|  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |").  
+    print_slow("|  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
+    print_slow("|   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |")
+    print_slow("|  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
+    print_slow("|__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|")
 
     """
     Start function of the game which lets the player select to play or to quit the game
@@ -29,7 +36,7 @@ while True:
         print()
         print("______________________________________________________________")
         print()
-        print("You wanna play a game of Hangman?\n")
+        print_slow("You wanna play a game of Hangman?\n")
         choice = input("Please press 'p' to play a game or 'q' to leave the game\n").lower()
         if choice == 'p':
             player_name = input("Hi, glad you chose to play. Please enter your name: \n")
