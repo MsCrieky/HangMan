@@ -73,9 +73,9 @@ while True:
         # Print out made guesses
         while not game_over:
             if len(guessed_letters) > 0:
-                print("--------------------------------------------------\n")
-                print("\nYOU HAVE GUESSED THESE LETTERS SO FAR: ", guessed_letters_str)
-                print("--------------------------------------------------\n")
+                print("-----------------------------------------------------------------------------------------\n")
+                print("\nYOU HAVE GUESSED THESE LETTERS SO FAR WICH ARE NOT IN THE WORD: ", guessed_letters_str)
+                print("----------------------------------------------------------------------------------------\n")
                 print()
 
             # Printing out the picture of hangman if guess is wrong
@@ -87,24 +87,30 @@ while True:
             # Lets the player chose a letter of choice he thinks is in the word
             guess = input("\nPlease, guess a letter: \n")
 
-            # Keep the wrong guesses
-            wrong_guesses = True
+            # Checks for a valid input (only letters and one at a time)
+            if len(guess) == 1 and guess.isalpha():
 
-            """ 
-            Checks if the guessed letter is in the random word
-            """
-            i = 0
-            for letter in answer:
-                if letter == guess:
-                    word[i] = letter
-                    wrong_guesses = False
-                i += 1
+                # Keep the wrong guesses
+                wrong_guesses = True
 
-            # Put wrong guesses in a list
-            if wrong_guesses:
-                guessed_letters.append(guess.upper())
+                """ 
+                Checks if the guessed letter is in the random word
+                """
+                i = 0
+                for letter in answer:
+                    if letter == guess:
+                        word[i] = letter
+                        wrong_guesses = False
+                    i += 1
 
-                guessed_letters_str = ' '.join(f"{Fore.RED}{g}{Style.RESET_ALL}" for g in guessed_letters)
+                # Put wrong guesses in a list
+                if wrong_guesses:
+                    guessed_letters.append(guess.upper())
+
+                    guessed_letters_str = ' '.join(f"{Fore.RED}{g}{Style.RESET_ALL}" for g in guessed_letters)
+
+            else:
+                print("Invalid choice, please enter a letter")
 
             if not "_ " in word:
                 game_over = True
