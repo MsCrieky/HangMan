@@ -1,6 +1,11 @@
 # Asks the player at the end of the game if he wants to play another game.
 def play_again():
-    return input("Do you fancy another game? (y/n)").lower() == 'y'
+    while True:
+        user_input = input("Do you fancy another game? (y/n)").lower()
+        if user_input == 'y' or user_input == 'n':
+            return user_input == 'y'
+        else:
+            print("Invalid input. Please enter 'y' for yes or 'n' for no.")
 
 """
 Libraries and imports
