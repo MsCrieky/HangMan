@@ -87,8 +87,18 @@ while True:
             # Printing out the random word
             print("".join(word))
 
+            print(" +-------+"),
+            print(" |   "),
+            print(" |   "),
+            print(" |   "),
+            print(" |   "),
+            print(" |   "),
+            print(" |   "),
+            print(" |   "),
+            print(" ======= ")
+
             # Lets the player chose a letter of choice he thinks is in the word
-            guess = input(f"\n{Fore.GREEN}Please, guess a letter: {style.RESET_ALL}\n")
+            guess = input(f"\n{Fore.GREEN}Please, guess a letter: {Style.RESET_ALL}\n")
 
             # Checks for a valid input (only letters and one at a time)
             if len(guess) == 1 and guess.isalpha():
