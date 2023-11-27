@@ -110,6 +110,11 @@ while True:
             # Checks for a valid input (only letters and one at a time)
             if len(guess) == 1 and guess.isalpha():
 
+                # Check if the guessed letter has already been guessed
+                if guess.lower() in guessed_letters or guess in word:
+                    print(f"\n{Fore.RED}You already guessed '{guess.lower()}', try a different letter!{Style.RESET_ALL}\n")
+                    continue  # Skip the rest of the loop and prompt the user to guess again
+
                 # Keep the wrong guesses
                 wrong_guesses = True
 
@@ -162,7 +167,8 @@ while True:
             print()
             print("                                     \|/ ")
             print("                                   ^-O-O-^ ")    
-            print(f"                           -----ooO--U--Ooo-----{Style.RESET_ALL}\n")
+            print("                            -----ooO--U--Ooo-----\n")
             print()
             print()
+            print(f"___________________________________________________________________________{Style.RESET_ALL}")
             break # Exit the loop if they player chose to end 
