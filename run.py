@@ -103,6 +103,8 @@ while True:
 
             # Lets the player chose a letter of choice he thinks is in the word
             guess = input(f"\n{Fore.BLUE}Please, guess a letter: {Style.RESET_ALL}\n")
+            print()
+            print()
 
             # Checks for a valid input (only letters and one at a time)
             if len(guess) == 1 and guess.isalpha():
@@ -124,7 +126,7 @@ while True:
                 if wrong_guesses:
                     guessed_letters.append(guess.lower())
 
-                    guessed_letters_str = ' '.join(f"{Fore.RED}{g}{Style.RESET_ALL}" for g in guessed_letters)
+                    guessed_letters_str = ' '.join(f"{Fore.YELLOW}{g}{Style.RESET_ALL}" for g in guessed_letters)
 
                 if guess in word:
                   print(f"\n{Fore.GREEN}Great Guess, keep em coming!{Style.RESET_ALL}\n")
