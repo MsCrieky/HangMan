@@ -37,10 +37,12 @@ while True:
         print(f"{Fore.YELLOW}       ______________________________________________________________{Style.RESET_ALL}")
         print()
         print_slow(f"{Fore.YELLOW}                   You wanna play a game of Hangman?{Style.RESET_ALL}\n")
+        print()
+        print("Hangman Rules: The computer makes up a word and You try to guess it.  The word to guess is represented by a row of dashes, one for each letter.  You guess a letter by typing it and press Enter.  If the guessed letter is in the word, the dashes are replaced with the letter.  If you guessed wrong, a part of the hangman is drawn.  You continue to guess until you guessed the whole word or make too many incorrect guesses.  The game ends when the word is guessed correctly or the hangman is fully drawn.")
+        print()
         choice = input(f"{Fore.YELLOW}          Please press 'p' to play a game or 'q' to leave the game{Style.RESET_ALL}\n").lower()
 
-        print("Hangman Rules: The computer makes up a word and You try to guess it.  The word to guess is represented by a row of dashes, one for each letter.  You guess a letter by typing it and press Enter.  If the guessed letter is in the word, the dashes are replaced with the letter.  If you guessed wrong, a part of the hangman is drawn.  You continue to guess until you guessed the whole word or make too many incorrect guesses.  The game ends when the word is guessed correctly or the hangman is fully drawn.")
-        if choice == 'p':
+                if choice == 'p':
             while True:
                 player_name = input(f"{Fore.YELLOW}              Hi, glad you chose to play. Please enter your name: {Style.RESET_ALL}\n")
                 # Checks so the player enters a valid name
