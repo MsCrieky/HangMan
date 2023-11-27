@@ -11,6 +11,7 @@ while True:
     import random  # Lets us get a random word of the ones stored in dictionary
     from colorama import Fore, Back, Style # Adds colors
     import time # Add delay to print out text
+    import emoji
 
     def print_slow(text, speed = 0.005):
         for character in text:
@@ -52,15 +53,15 @@ while True:
                 else:
                     print(f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}")
         elif choice == 'q':
-            print(f"{Fore.BLUE}-----------------------------------------------------------------")
+            print(f"{Fore.BLUE}--------------------------------------------------------------------------")
             print()
             print("                                      \|/ ")
             print("                                    ^-O-O-^ ")    
             print("----------------------------------ooO--U--Ooo------------------------------\n")
-            print(f"Ok, thanks for visiting, have a great day!")
+            print(f".                 Ok, thanks for visiting, have a great day!")
             print()
             print(f"---------------------------------------------------------------------------{Style.RESET_ALL}\n")
-            return False
+            
         else:
             print("Invalid choice, please enter 'p' start the game or 'q' to quit the game \n")
             return start_game()
@@ -88,19 +89,21 @@ while True:
         while not game_over:
             if len(guessed_letters) > 0:
                 print()
-                print("\nYOU HAVE GUESSED THESE LETTERS SO FAR WICH ARE NOT IN THE WORD: ", guessed_letters_str)
+                print(f"{Fore.BLUE}________________________________________________________________________________")
+                print(f"\nYOU HAVE GUESSED THESE LETTERS SO FAR WICH ARE NOT IN THE WORD: {Style.RESET_ALL}", guessed_letters_str)
                 print()
 
 
             # Printing out the picture of hangman if guess is wrong
             print("\n".join(hangman.hangmans[len(guessed_letters)]))
+            
 
             # Printing out the random word
             print("".join(word))
 
 
             # Lets the player chose a letter of choice he thinks is in the word
-            guess = input(f"\n{Fore.GREEN}Please, guess a letter: {Style.RESET_ALL}\n")
+            guess = input(f"\n{Fore.BLUE}Please, guess a letter: {Style.RESET_ALL}\n")
 
             # Checks for a valid input (only letters and one at a time)
             if len(guess) == 1 and guess.isalpha():
@@ -123,6 +126,9 @@ while True:
                     guessed_letters.append(guess.lower())
 
                     guessed_letters_str = ' '.join(f"{Fore.RED}{g}{Style.RESET_ALL}" for g in guessed_letters)
+
+                if guess in word:
+                  print(f"\n{Fore.GREEN}Great Guess, keep em coming!{Style.RESET_ALL}\n")
 
             else:
                 print("_________________________________________________________________")
