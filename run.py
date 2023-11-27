@@ -11,7 +11,6 @@ while True:
     import random  # Lets us get a random word of the ones stored in dictionary
     from colorama import Fore, Back, Style # Adds colors
     import time # Add delay to print out text
-    import emoji
 
     def print_slow(text, speed = 0.005):
         for character in text:
