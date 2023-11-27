@@ -47,8 +47,8 @@ while True:
                 # Checks so the player enters a valid name
                 if len(player_name) >= 2 and player_name.isalpha():
                     print()
-                    print("---------------------------------------------------------------------\n")
-                    print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
+                    print(f"{Fore.BLUE}---------------------------------------------------------------------\n")
+                    print(f"Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
                     return True
                 else:
                     print(f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}")
