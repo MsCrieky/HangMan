@@ -34,10 +34,10 @@ while True:
     """
     def start_game():
         print()
-        print("______________________________________________________________")
+        print("       ______________________________________________________________")
         print()
-        print_slow("You wanna play a game of Hangman?\n")
-        choice = input("Please press 'p' to play a game or 'q' to leave the game\n").lower()
+        print_slow(".       You wanna play a game of Hangman?\n")
+        choice = input("     Please press 'p' to play a game or 'q' to leave the game\n").lower()
         if choice == 'p':
             player_name = input("Hi, glad you chose to play. Please enter your name: \n")
             print()
@@ -108,7 +108,7 @@ while True:
 
                 # Put wrong guesses in a list
                 if wrong_guesses:
-                    guessed_letters.append(guess.upper())
+                    guessed_letters.append(guess.lower())
 
                     guessed_letters_str = ' '.join(f"{Fore.RED}{g}{Style.RESET_ALL}" for g in guessed_letters)
 
