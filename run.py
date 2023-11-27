@@ -89,7 +89,8 @@ while True:
             if len(guessed_letters) > 0:
                 print()
                 print(f"{Fore.BLUE}________________________________________________________________________________")
-                print(f"\nYOU HAVE GUESSED THESE LETTERS SO FAR WICH ARE NOT IN THE WORD: {Style.RESET_ALL}", guessed_letters_str)
+                print("Oops, wrong letter...")
+                print(f"\nWrong guesses so far: {Style.RESET_ALL}", guessed_letters_str)
                 print()
 
 
