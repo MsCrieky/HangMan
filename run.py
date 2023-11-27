@@ -39,7 +39,12 @@ while True:
         print_slow(f"{Fore.YELLOW}                   You wanna play a game of Hangman?{Style.RESET_ALL}\n")
         choice = input(f"{Fore.YELLOW}          Please press 'p' to play a game or 'q' to leave the game{Style.RESET_ALL}\n").lower()
         if choice == 'p':
-            player_name = input(f"{Fore.YELLOW}.         Hi, glad you chose to play. Please enter your name: {Style.RESET_ALL}\n")
+            player_name = input(f"{Fore.YELLOW}            Hi, glad you chose to play. Please enter your name: {Style.RESET_ALL}\n")
+            # Makes sure the player puts a valid name and a minimum of two letters
+            if len(player_name) >= 2 and player_name.isalpha():
+                break  # If the input is valid it breaks out of the loop
+            else:
+                print(f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}")
             print()
             print("---------------------------------------------------------------------\n")
             print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
@@ -49,8 +54,7 @@ while True:
             print(f"{Fore.BLUE}                      \|/ ")
             print("                    ^-O-O-^ ")    
             print("------------------ooO--U--Ooo-----\n")
-            print(f"Ok, thanks for visiting, have a great day!{Style.RESET_ALL}")
-            
+            print(f"Ok, thanks for visiting, have a great day!{Style.RESET_ALL}")           
         else:
             print("Invalid choice, please enter 'p' start the game or 'q' to quit the game \n")
             return start_game()
@@ -81,21 +85,13 @@ while True:
                 print("\nYOU HAVE GUESSED THESE LETTERS SO FAR WICH ARE NOT IN THE WORD: ", guessed_letters_str)
                 print()
 
+
             # Printing out the picture of hangman if guess is wrong
             print("\n".join(hangman.hangmans[len(guessed_letters)]))
 
             # Printing out the random word
             print("".join(word))
 
-            print(" +-------+"),
-            print(" |   "),
-            print(" |   "),
-            print(" |   "),
-            print(" |   "),
-            print(" |   "),
-            print(" |   "),
-            print(" |   "),
-            print(" ======= ")
 
             # Lets the player chose a letter of choice he thinks is in the word
             guess = input(f"\n{Fore.GREEN}Please, guess a letter: {Style.RESET_ALL}\n")
@@ -128,7 +124,7 @@ while True:
 
             if not "_ " in word:
                 game_over = True
-                print("________________________________________\n")
+                print("_________________________________________________________________\n")
                 print("\nYay, you made it... you guessed the correct word which was "  + "".join(answer).upper() + " Great job!!")
                 print()
                 print("               ,,, ")
@@ -136,7 +132,7 @@ while True:
                 print("----------oOO--( )--OOo----\n")
             elif len(guessed_letters) == len(hangman.hangmans) -1:
                 game_over = True
-                print("____________________________________________________\n")
+                print("________________________________________________________________\n")
                 print("\nSorry, you lost... The word was: " + "".join(answer).upper())
                 print()
                 print("       \|||/ ")
@@ -145,7 +141,7 @@ while True:
 
         # Ask if the player wants to play again
         if not play_again():
-            print("__________________________________________________\n")
+            print("____________________________________________________________________\n")
             print("Thank you for playing, see you soon again!!!\n")
             print()
             print("                      \|/ ")
