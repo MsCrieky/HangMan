@@ -47,8 +47,8 @@ while True:
                     print("---------------------------------------------------------------------\n")
                     print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
                     return True
-            else:
-                print(f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}")
+                else:
+                    print(f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}")
         elif choice == 'q':
             print()
             print(f"{Fore.BLUE}                      \|/ ")
