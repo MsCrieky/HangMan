@@ -73,9 +73,8 @@ while True:
         # Print out made guesses
         while not game_over:
             if len(guessed_letters) > 0:
-                print("-----------------------------------------------------------------------------------------\n")
+                print()
                 print("\nYOU HAVE GUESSED THESE LETTERS SO FAR WICH ARE NOT IN THE WORD: ", guessed_letters_str)
-                print("----------------------------------------------------------------------------------------\n")
                 print()
 
             # Printing out the picture of hangman if guess is wrong
@@ -110,7 +109,8 @@ while True:
                     guessed_letters_str = ' '.join(f"{Fore.RED}{g}{Style.RESET_ALL}" for g in guessed_letters)
 
             else:
-                print("Invalid choice, please enter a letter")
+                print("_________________________________________________________________")
+                print(f"{Fore.RED}Invalid choice, please enter a letter{Style.RESET_ALL}")
 
             if not "_ " in word:
                 game_over = True
