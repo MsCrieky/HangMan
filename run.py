@@ -43,10 +43,10 @@ while True:
                 player_name = input(f"{Fore.YELLOW}              Hi, glad you chose to play. Please enter your name: {Style.RESET_ALL}\n")
                 # Checks so the player enters a valid name
                 if len(player_name) >= 2 and player_name.isalpha():
-                print()
-                print("---------------------------------------------------------------------\n")
-                print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
-                return True
+                    print()
+                    print("---------------------------------------------------------------------\n")
+                    print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
+                    return True
             else:
                 print(f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}")
         elif choice == 'q':
