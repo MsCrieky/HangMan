@@ -21,13 +21,13 @@ while True:
         print()
 
     # Welcoming ASCii art
-    print_slow("Welcome to: \n")
-    print_slow(" __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
-    print_slow("|  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |") 
-    print_slow("|  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
-    print_slow("|   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |")
-    print_slow("|  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
-    print_slow("|__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|")
+    print_slow(f"{Fore.YELLOW}       Welcome to: \n")
+    print_slow("    __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
+    print_slow("   |  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |") 
+    print_slow("   |  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
+    print_slow("   |   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |")
+    print_slow("   |  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |")
+    print_slow(f"   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|{Style.RESET_ALL}")
 
     """
     Start function of the game which lets the player select to play or to quit the game
@@ -42,7 +42,7 @@ while True:
             player_name = input("Hi, glad you chose to play. Please enter your name: \n")
             print()
             print("-------------------------------------------------------------\n")
-            print(f"Hello {player_name}! Let's start the game, chose a letter...\n")
+            print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
             return True
         elif choice == 'q':
             print("Ok, thanks for visiting, have a great day!")
@@ -115,11 +115,11 @@ while True:
             if not "_ " in word:
                 game_over = True
                 print("________________________________________\n")
-                print("\nYay, you made it.... you guessed the correct word which was "  + "".join(answer).upper() + " Great job!!")
+                print("\nYay, you made it... you guessed the correct word which was "  + "".join(answer).upper() + " Great job!!")
                 print()
-                print("         ,,, ")
-                print("        (o o) ")
-                print("----oOO--( )--OOo----\n")
+                print("               ,,, ")
+                print("              (o o) ")
+                print("----------oOO--( )--OOo----\n")
             elif len(guessed_letters) == len(hangman.hangmans) -1:
                 game_over = True
                 print("____________________________________________________\n")
