@@ -21,7 +21,7 @@ while True:
         print()
 
     # Welcoming ASCii art
-    print_slow(f"{Fore.YELLOW}       Welcome to: \n")
+    print_slow(f"{Fore.YELLOW}Welcome to: \n")
     print_slow("    __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __.")
     print_slow("   |  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |") 
     print_slow("   |  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |")
@@ -39,16 +39,16 @@ while True:
         print_slow(f"{Fore.YELLOW}                   You wanna play a game of Hangman?{Style.RESET_ALL}\n")
         choice = input(f"{Fore.YELLOW}          Please press 'p' to play a game or 'q' to leave the game{Style.RESET_ALL}\n").lower()
         if choice == 'p':
-            player_name = input(f"{Fore.YELLOW}            Hi, glad you chose to play. Please enter your name: {Style.RESET_ALL}\n")
-            # Makes sure the player puts a valid name and a minimum of two letters
-            if len(player_name) >= 2 and player_name.isalpha():
-                break  # If the input is valid it breaks out of the loop
+            while True:
+                player_name = input(f"{Fore.YELLOW}              Hi, glad you chose to play. Please enter your name: {Style.RESET_ALL}\n")
+                # Checks so the player enters a valid name
+                if len(player_name) >= 2 and player_name.isalpha():
+                print()
+                print("---------------------------------------------------------------------\n")
+                print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
+                return True
             else:
                 print(f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}")
-            print()
-            print("---------------------------------------------------------------------\n")
-            print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
-            return True
         elif choice == 'q':
             print()
             print(f"{Fore.BLUE}                      \|/ ")
