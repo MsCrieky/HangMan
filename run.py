@@ -45,7 +45,11 @@ while True:
             print(f"{Fore.BLUE}Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n")
             return True
         elif choice == 'q':
-            print("Ok, thanks for visiting, have a great day!")
+            print()
+            print(f"{Fore.BLUE}                      \|/ ")
+            print("                    ^-O-O-^ ")    
+            print("------------------ooO--U--Ooo-----\n")
+            print(f"Ok, thanks for visiting, have a great day!{Style.RESET_ALL}")
             return False
         else:
             print("Invalid choice, please enter 'p' start the game or 'q' to quit the game \n")
