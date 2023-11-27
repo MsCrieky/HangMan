@@ -155,10 +155,14 @@ while True:
 
         # Ask if the player wants to play again
         if not play_again():
-            print(f"{Fore.BLUE}____________________________________________________________________\n")
-            print("Thank you for playing, see you soon again!!!\n")
             print()
-            print("                      \|/ ")
-            print("                    ^-O-O-^ ")    
-            print(f"------------------ooO--U--Ooo-----{Style.RESET_ALL}\n")
+            print()
+            print(f"{Fore.BLUE}____________________________________________________________________\n")
+            print("                   Thank you for playing, see you soon again!!!\n")
+            print()
+            print("                                     \|/ ")
+            print("                                   ^-O-O-^ ")    
+            print(f"                           -----ooO--U--Ooo-----{Style.RESET_ALL}\n")
+            print()
+            print()
             break # Exit the loop if they player chose to end 
