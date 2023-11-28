@@ -31,3 +31,15 @@ Start Screen
 - When the console is launched, the Hangman ASCII art appears along with the game rules. The player is prompted to choose between starting a new game or quitting to exit the game.
 
 ![Start Screen](images/StartScreen.png)
+
+Input Name
+
+- The game welcomes the player with a prompt to enter their name, adding a personalized touch to the gaming experience. This step ensures a unique and engaging connection with the player before diving into the challenges of Hangman.
+
+![Name Screen](images/Name_screen.png)
+
+Letter Input
+
+- In this interactive phase, the player is prompted to guess a letter for the Hangman game. The console awaits the player's input, creating an immersive experience as they strategically select a letter they believe is part of the hidden word. This step is crucial for progressing through the game and adds an element of suspense and strategy to the overall gameplay.
+
+![Letter Input](images/Enter_First_Letter_Screen.png)
