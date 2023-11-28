@@ -34,7 +34,7 @@ Start Screen
 
 Input Name
 
-- The game welcomes the player with a prompt to enter their name, adding a personalized touch to the gaming experience. This step ensures a unique and engaging connection with the player before diving into the challenges of Hangman.
+- The game welcomes the player with a prompt to enter their name, adding a personalized touch to the gaming experience. This step ensures a unique and engaging connection with the player before diving into the challenges of Hangman. The input requires a minimum of two letters for validation. 
 
 ![Name Screen](images/Name_screen.png)
 
@@ -43,3 +43,15 @@ Letter Input
 - In this interactive phase, the player is prompted to guess a letter for the Hangman game. The console awaits the player's input, creating an immersive experience as they strategically select a letter they believe is part of the hidden word. This step is crucial for progressing through the game and adds an element of suspense and strategy to the overall gameplay.
 
 ![Letter Input](images/Enter_First_Letter_Screen.png)
+
+Correct Choice of Letter
+
+- In this victorious moment, the player has successfully guessed a letter that is part of the secret word. The console responds with a positive acknowledgment, updating the display to reveal the correct placement of the guessed letter(s) within the word. This progress brings the player closer to unraveling the complete word and adds a sense of accomplishment to the gaming experience.
+
+![Correct Guess](images/Correct_Guess.png)
+
+Wrong Choice of Letter
+
+- Uh-oh! The player has made an incorrect guess, and the consequences are unfolding. The console responds by updating the Hangman display, illustrating a part of the Hangman figure. Additionally, a list of incorrect guesses is presented, urging the player to strategize and make more accurate choices in subsequent attempts. The challenge intensifies, adding suspense to the game.
+
+![Wrong Guess](images/Wrong_Guess.png)
