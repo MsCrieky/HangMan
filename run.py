@@ -27,17 +27,17 @@ while True:
     # Welcoming ASCii art
     print_slow(f"{Fore.YELLOW}Welcome to: \n")
     print_slow("    __    __     ___    .__   __.  ______ .___  ___.    ___  "
-    "   .__   __.")
+               "   .__   __.")
     print_slow("   |  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \ "
-    "   |  \ |  |")
+               "   |  \ |  |")
     print_slow("   |  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  "
-    "\   |   \|  |")
+               "\   |   \|  |")
     print_slow("   |   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  "
-    "\  |  . `  |")
+               "\  |  . `  |")
     print_slow("   |  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____ "
-    " \ |  |\   |")
+               " \ |  |\   |")
     print_slow(f"   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     "
-    f" \__|__| \__|{Style.RESET_ALL}"
+               f" \__|__| \__|{Style.RESET_ALL}"
 
     """
     Start function of the game which lets
@@ -65,42 +65,43 @@ while True:
             "incorrect guesses. The game ends when the word is guessed"
             "correctly or the hangman is fully drawn.\n")
         print()
-        choice = input(f"{Fore.YELLOW}          Please press 'p' to play a game or 'q' "
-                       f"to leave the game{Style.RESET_ALL}\n").lower()
+        choice=input(f"{Fore.YELLOW}          Please press 'p' to play a"
+                     "game or 'q' to leave the game"
+                     f"{Style.RESET_ALL}\n").lower()
 
         if choice == "p":
             while True:
-                player_name = input(f"{Fore.YELLOW}              Hi, glad you chose to "
-                                    f"play. Please enter your name: {Style.RESET_ALL}\n")
+                player_name=input(f"{Fore.YELLOW}              Hi, glad you"
+                                  f"chose to play. Please enter your name: "
+                                  f"{Style.RESET_ALL}\n")
                 # Checks so the player enters a valid name
                 if len(player_name) >= 2 and player_name.isalpha():
                     print()
-                    print(f"{Fore.BLUE}------------------------------------------------"
-                          "---------------------\n")
-                    print(f"Hello {player_name}! Let's start the game, chose a letter.."
-                          f"{Style.RESET_ALL}\n")
+                    print(f"{Fore.BLUE}--------------------------------------"
+                          "-------------------------------\n")
+                    print(f"Hello {player_name}! Let's start the game, chose a"
+                          f"letter..{Style.RESET_ALL}\n")
                     return True
                 else:
-                    print(
-                        f"{Fore.RED}Invalid name. Please enter at least two letters, "
-                      f"using only alphabetic characters.{Style.RESET_ALL}")
+                    print(f"{Fore.RED}Invalid name. Please enter at least two"
+                          f"letters, using only alphabetic characters.
+                          {Style.RESET_ALL}")
         elif choice == "q":
-            print(f"{Fore.BLUE}------------------------------------------------------"
-                  "--------------------")
+            print(f"{Fore.BLUE}----------------------------------------------"
+                  "----------------------------")
             print()
             print("                                      \|/ ")
             print("                                    ^-O-O-^ ")
-            print("----------------------------------ooO--U--Ooo---------------------"
-                  "---------\n")
-            print("                 Ok, thanks for visiting, have a great day!")
+            print("----------------------------------ooO--U--Ooo-------------"
+                  "-----------------\n")
+            print("                Ok, thanks for visiting, have a great day!")
             print()
-            print(
-                f"-------------------------------------------------------------------"
-              f"--------{Style.RESET_ALL}\n")
+            print(f"----------------------------------------------------------"
+                  f"----------------{Style.RESET_ALL}\n")
 
         else:
-            print("Invalid choice, please enter 'p' start the game or 'q' to quit "
-                  "the game \n")
+            print("Invalid choice, please enter 'p' start the game or 'q' to"
+                  "quit the game \n")
             return start_game()
 
     """
@@ -108,28 +109,27 @@ while True:
     chosen, the player get to chose letter etc
     """
     if start_game():
-        answer = random.choice(dictionary.words)
-        answer = list(answer)
+        answer=random.choice(dictionary.words)
+        answer=list(answer)
 
-        game_over = False
+        game_over=False
 
         # Creates an empty word
-        word = []
+        word=[]
         for i in range(0, len(answer)):
             if answer[i] == " ":
                 word.append(" ")
             else:
                 word.append("_ ")
 
-        guessed_letters = []
+        guessed_letters=[]
 
         # Print out made guesses
         while not game_over:
             if len(guessed_letters) > 0:
                 print()
-                print(
-                    f"{Fore.BLUE}_________________________________________________"
-                  "_______________________________")
+                print(f"{Fore.BLUE}___________________________________________"
+                      "_____________________________________")
                 print("Oops, wrong letter...")
                 print(f"\nWrong guesses so far: {Style.RESET_ALL}",
                       guessed_letters_str)
@@ -142,7 +142,8 @@ while True:
             print("".join(word))
 
             # Lets the player chose a letter of choice he thinks is in the word
-            guess = input(f"\n{Fore.BLUE}Please, guess a letter: {Style.RESET_ALL}\n")
+            guess=input(f"\n{Fore.BLUE}Please, guess a letter: "
+                        f"{Style.RESET_ALL}\n")
             print()
             print()
 
@@ -150,58 +151,60 @@ while True:
             if len(guess) == 1 and guess.isalpha():
                 # Check if the guessed letter has already been guessed
                 if guess.lower() in guessed_letters or guess in word:
-                    print(f"\n{Fore.RED}You already guessed '{guess.lower()}', "
+                    print(f"\n{Fore.RED}You already guessed '{guess.lower()}',"
                           f"try a different letter!{Style.RESET_ALL}\n")
-                    # Skip the rest of the loop and prompt the user to guess again
+                    # Skip rest of the loop and prompt the user to guess again
                     continue  
 
                 # Keep the wrong guesses
-                wrong_guesses = True
+                wrong_guesses=True
 
                 """
                 Checks if the guessed letter is in the random word
                 """
-                i = 0
+                i=0
                 for letter in answer:
                     if letter == guess:
-                        word[i] = letter
-                        wrong_guesses = False
+                        word[i]=letter
+                        wrong_guesses=False
                     i += 1
 
                 # Put wrong guesses in a list
                 if wrong_guesses:
                     guessed_letters.append(guess.lower())
 
-                    guessed_letters_str = " ".join(f"{Fore.YELLOW}{g}{Style.RESET_ALL}"
-                                                   for g in guessed_letters)
+                    guessed_letters_str=" ".join(f"{Fore.YELLOW}{g}
+                                                 {Style.RESET_ALL}"
+                                                 for g in guessed_letters)
 
                 if guess in word:
                     print(f"\n{Fore.GREEN}Great Guess, keep em coming!"
-                    f"{Style.RESET_ALL}\n")
+                          f"{Style.RESET_ALL}\n")
 
             else:
-                print("______________________________________________________________"
-                      "___")
+                print("______________________________________________________"
+                      "___________")
                 print(f"{Fore.RED}Invalid choice, please enter a letter"
-                f"{Style.RESET_ALL}")
+                      f"{Style.RESET_ALL}")
 
             if not "_ " in word:
-                game_over = True
-                print(f"{Fore.YELLOW}________________________________________________"
-                      "___________________\n")
-                print("\nYay, you made it... you guessed the correct word which was "
-                    + "".join(answer).upper()
-                    + " Great job!!")
+                game_over=True
+                print(f"{Fore.YELLOW}________________________________________"
+                      "___________________________\n")
+                print("\nYay, you made it... you guessed the correct word "
+                      "which was "
+                      + "".join(answer).upper()
+                      + " Great job!!")
                 print()
                 print("               ,,, ")
                 print("              (o o) ")
                 print(f"----------oOO--( )--OOo----{Style.RESET_ALL}\n")
             elif len(guessed_letters) == len(hangman.hangmans) - 1:
-                game_over = True
-                print(
-                    f"{Fore.RED}______________________________________________________"
-                  "__________\n")
-                print("\nSorry, you lost... The word was: " + "".join(answer).upper())
+                game_over=True
+                print(f"{Fore.RED}___________________________________________"
+                      "_____________________\n")
+                print("\nSorry, you lost... The word was: " 
+                      + "".join(answer).upper())
                 print()
                 print("       \|||/ ")
                 print("       (o o) ")
@@ -211,16 +214,16 @@ while True:
         if not play_again():
             print()
             print()
-            print(f"{Fore.BLUE}________________________________________________________"
-                  "___________________\n")
-            print("                   Thank you for playing, see you soon again!!!\n")
+            print(f"{Fore.BLUE}_____________________________________________"
+                  "______________________________\n")
+            print("                   Thank you for playing, see you soon "
+                  "again!!!\n")
             print()
             print("                                     \|/ ")
             print("                                   ^-O-O-^ ")
             print("                            -----ooO--U--Ooo-----\n")
             print()
             print()
-            print(
-                f"______________________________________________________________________"
-              f"________{Style.RESET_ALL}")
+            print(f"________________________________________________________"
+                  f"______________________{Style.RESET_ALL}")
             break  # Exit the loop if they player chose to end
