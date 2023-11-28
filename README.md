@@ -2,11 +2,14 @@
 
 ## Introduction
 
+
 Welcome to Hangman, a classic word-guessing game where you try to uncover a hidden word letter by letter. 
 This console-based Hangman game is a simple yet entertaining way to challenge your vocabulary.
 
 
 ## How to play:
+
+
 1. Run the script in a Python environment.
 2. Enter your name to start the game.
 3. Guess letters to uncover the hidden word.
@@ -17,6 +20,7 @@ This console-based Hangman game is a simple yet entertaining way to challenge yo
 ![Am I Responsive](images/Hangman%20responsive.png)
 
 ## Logic and Planning
+
 
 Before diving into the world of Hangman, let's explore the meticulous planning and logical structure that lay the foundation for this captivating game.
 
@@ -41,6 +45,7 @@ In essence, the logic and planning behind the Hangman game aim to deliver not ju
 
 
 ## Features
+
 
 - **Interactive Gameplay:**     Guess letters to reveal the hidden word.
 - **Random Word Selection:**    Each game features a randomly selected word from a predefined list.
@@ -106,3 +111,66 @@ Should I Stay or Should I Go:
 - As you choose to depart, the hangman's shadow lingers. A choice made to step away from the enigmatic challenge. Until we meet again, the lingering mysteries remain unsolved. Until next time, brave soul. May your adventures be many.
 
 ![Quit](images/Q_Choice.png)
+
+
+## Technologies Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Frameworks, Libraries, Modules & Programs Used
+
+- Github
+  - Deployment of the website and storing the files online.
+- Am I Responsive
+  - Mockup picture for the README file.
+- Codeanywhere
+  - To write the code.
+- Python
+  - Time, sleep module to delay text print-out.
+  - Colorama, for different colors on text and ascii
+  - Random, for a random choice in word list
+
+
+## Testing
+
+![Lighthouse]
+
+Manual Testing
+
+
+
+## Deployment
+
+
+
+The live link to HangMan: https://malins-hangman-pp3-af4a9d9cbd8a.herokuapp.com/ 
+
+## Credits
+
+Code
+
+- Understanding the concept of Python has been a challenging task and I found a lot of help in freeCodeCamp as well as in Bro Codes YouTube channel.
+- The README template was helpfully provided by Code Institute (template) as was the main template.
+- Using PyNative as a tool was extremely helpful.
+- Slack has been a good platform for inputs and ideas.
+- ChatGPT has also been a resource for explaining things to me as a newbie.
+
+Content
+
+- All the text was written by the developer with a little help from ChatGPT.
+
+ASCII are taken from:
+- patorjk.com
+- asciiart.eu 
+
+## Acknowledgements
+
+- Slack community has been a great resource for help and ideas.
+- My mentor Mitko Bachvarov has provided me with good links to helpful websites and gently guided me with good feedback.
+- freeCodeCamp, thank you for your page and course, it was a great help.
+- Bro Code, keep em coming. 
+- ChatGPT, thanks for the tuition, laughs and correction of text.
+- Anna, my inspiration and support. Thank you.
+
