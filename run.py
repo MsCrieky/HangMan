@@ -50,9 +50,8 @@ while True:
             f"{Fore.YELLOW}       ___________________________________________"
             f"___________________{Style.RESET_ALL}")
         print()
-        print_slow(
-            f"{Fore.YELLOW}                   You wanna play a game of "
-            f"Hangman?{Style.RESET_ALL}\n")
+        print_slow(f"{Fore.YELLOW}                   You wanna play a game of "
+                   f"Hangman?{Style.RESET_ALL}\n")
         print()
         print(
             "Hangman Rules: The computer makes up a word and You try to "
@@ -65,15 +64,15 @@ while True:
             "incorrect guesses. The game ends when the word is guessed"
             "correctly or the hangman is fully drawn.\n")
         print()
-        choice=input(f"{Fore.YELLOW}          Please press 'p' to play a"
-                     "game or 'q' to leave the game"
-                     f"{Style.RESET_ALL}\n").lower()
+        choice = input(f"{Fore.YELLOW}          Please press 'p' to play a"
+                       "game or 'q' to leave the game"
+                       f"{Style.RESET_ALL}\n").lower()
 
         if choice == "p":
             while True:
-                player_name=input(f"{Fore.YELLOW}              Hi, glad you"
-                                  f"chose to play. Please enter your name: "
-                                  f"{Style.RESET_ALL}\n")
+                player_name = input(f"{Fore.YELLOW}              Hi, glad you"
+                                    f"chose to play. Please enter your name: "
+                                    f"{Style.RESET_ALL}\n")
                 # Checks so the player enters a valid name
                 if len(player_name) >= 2 and player_name.isalpha():
                     print()
@@ -109,20 +108,20 @@ while True:
     chosen, the player get to chose letter etc
     """
     if start_game():
-        answer=random.choice(dictionary.words)
-        answer=list(answer)
+        answer = random.choice(dictionary.words)
+        answer = list(answer)
 
-        game_over=False
+        game_ove = False
 
         # Creates an empty word
-        word=[]
+        word = []
         for i in range(0, len(answer)):
             if answer[i] == " ":
                 word.append(" ")
             else:
                 word.append("_ ")
 
-        guessed_letters=[]
+        guessed_letters = []
 
         # Print out made guesses
         while not game_over:
@@ -142,8 +141,8 @@ while True:
             print("".join(word))
 
             # Lets the player chose a letter of choice he thinks is in the word
-            guess=input(f"\n{Fore.BLUE}Please, guess a letter: "
-                        f"{Style.RESET_ALL}\n")
+            guess = input(f"\n{Fore.BLUE}Please, guess a letter: "
+                          f"{Style.RESET_ALL}\n")
             print()
             print()
 
@@ -157,25 +156,25 @@ while True:
                     continue
 
                 # Keep the wrong guesses
-                wrong_guesses=True
+                wrong_guesses = True
 
                 """
                 Checks if the guessed letter is in the random word
                 """
-                i=0
+                i = 0
                 for letter in answer:
                     if letter == guess:
-                        word[i]=letter
-                        wrong_guesses=False
+                        word[i] = letter
+                        wrong_guesses = False
                     i += 1
 
                 # Put wrong guesses in a list
                 if wrong_guesses:
                     guessed_letters.append(guess.lower())
 
-                    guessed_letters_str=" ".join(f"{Fore.YELLOW}{g}"
-                                                 f"{Style.RESET_ALL}"
-                                                 for g in guessed_letters)
+                    guessed_letters_str = " ".join(f"{Fore.YELLOW}{g}"
+                                                   f"{Style.RESET_ALL}"
+                                                   for g in guessed_letters)
 
                 if guess in word:
                     print(f"\n{Fore.GREEN}Great Guess, keep em coming!"
@@ -188,7 +187,7 @@ while True:
                       f"{Style.RESET_ALL}")
 
             if not "_ " in word:
-                game_over=True
+                game_over = True
                 print(f"{Fore.YELLOW}________________________________________"
                       "___________________________\n")
                 print("\nYay, you made it... you guessed the correct word "
@@ -200,7 +199,7 @@ while True:
                 print("              (o o) ")
                 print(f"----------oOO--( )--OOo----{Style.RESET_ALL}\n")
             elif len(guessed_letters) == len(hangman.hangmans) - 1:
-                game_over=True
+                game_over = True
                 print(f"{Fore.RED}___________________________________________"
                       "_____________________\n")
                 print("\nSorry, you lost... The word was: "
