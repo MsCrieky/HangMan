@@ -27,17 +27,17 @@ while True:
     # Welcoming ASCii art
     print_slow(f"{Fore.YELLOW}Welcome to: \n")
     print_slow("    __    __     ___    .__   __.  ______ .___  ___.    ___  "
-    "  .__   __.")
+    "   .__   __.")
     print_slow("   |  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \ "
     "   |  \ |  |")
     print_slow("   |  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  "
-    "\|   \|  |")
+    "\   |   \|  |")
     print_slow("   |   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  "
-    "\ |  . `  |")
+    "\  |  . `  |")
     print_slow("   |  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____ "
-    " \|  |\   |")
+    " \ |  |\   |")
     print_slow(f"   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     "
-    f"\__|__| \__|{Style.RESET_ALL}")
+    f" \__|__| \__|{Style.RESET_ALL}"
 
     """
     Start function of the game which lets
