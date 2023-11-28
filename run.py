@@ -36,8 +36,8 @@ while True:
                "\  |  . `  |")
     print_slow("   |  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____ "
                " \ |  |\   |")
-    print_slow(f"   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     "
-               f" \__|__| \__|{Style.RESET_ALL}"
+    print_slow("   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     "
+               f" \__|__| \__|{Style.RESET_ALL}")
 
     """
     Start function of the game which lets
@@ -84,8 +84,8 @@ while True:
                     return True
                 else:
                     print(f"{Fore.RED}Invalid name. Please enter at least two"
-                          f"letters, using only alphabetic characters.
-                          {Style.RESET_ALL}")
+                          f"letters, using only alphabetic characters."
+                          f"{Style.RESET_ALL}")
         elif choice == "q":
             print(f"{Fore.BLUE}----------------------------------------------"
                   "----------------------------")
@@ -105,7 +105,7 @@ while True:
             return start_game()
 
     """
-    Here the game starts and the random word is 
+    Here the game starts and the random word is
     chosen, the player get to chose letter etc
     """
     if start_game():
@@ -154,7 +154,7 @@ while True:
                     print(f"\n{Fore.RED}You already guessed '{guess.lower()}',"
                           f"try a different letter!{Style.RESET_ALL}\n")
                     # Skip rest of the loop and prompt the user to guess again
-                    continue  
+                    continue
 
                 # Keep the wrong guesses
                 wrong_guesses=True
@@ -173,8 +173,8 @@ while True:
                 if wrong_guesses:
                     guessed_letters.append(guess.lower())
 
-                    guessed_letters_str=" ".join(f"{Fore.YELLOW}{g}
-                                                 {Style.RESET_ALL}"
+                    guessed_letters_str=" ".join(f"{Fore.YELLOW}{g}"
+                                                 f"{Style.RESET_ALL}"
                                                  for g in guessed_letters)
 
                 if guess in word:
@@ -203,7 +203,7 @@ while True:
                 game_over=True
                 print(f"{Fore.RED}___________________________________________"
                       "_____________________\n")
-                print("\nSorry, you lost... The word was: " 
+                print("\nSorry, you lost... The word was: "
                       + "".join(answer).upper())
                 print()
                 print("       \|||/ ")
