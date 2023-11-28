@@ -26,90 +26,86 @@ while True:
 
     # Welcoming ASCii art
     print_slow(f"{Fore.YELLOW}Welcome to: \n")
-    print_slow(
-        "    __    __     ___    .__   __.  ______ .___  ___.    ___    .__   __."
-    )
-    print_slow(
-        "   |  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \   |  \ |  |"
-    )
-    print_slow(
-        "   |  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  \  |   \|  |"
-    )
-    print_slow(
-        "   |   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  \ |  . `  |"
-    )
-    print_slow(
-        "   |  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____  \|  |\   |"
-    )
-    print_slow(
-        f"   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     \__|__| \__|{Style.RESET_ALL}"
-    )
+    print_slow("    __    __     ___    .__   __.  ______ .___  ___.    ___  "
+    "  .__   __.")
+    print_slow("   |  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \ "
+    "   |  \ |  |")
+    print_slow("   |  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  "
+    "\|   \|  |")
+    print_slow("   |   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  "
+    "\ |  . `  |")
+    print_slow("   |  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____ "
+    " \|  |\   |")
+    print_slow(f"   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     "
+    f"\__|__| \__|{Style.RESET_ALL}")
 
     """
-    Start function of the game which lets the player select to play or to quit the game
+    Start function of the game which lets
+    the player select to play or to quit the game
     """
 
     def start_game():
         print()
         print(
-            f"{Fore.YELLOW}       ______________________________________________________________{Style.RESET_ALL}"
-        )
+            f"{Fore.YELLOW}       ___________________________________________"
+            f"___________________{Style.RESET_ALL}")
         print()
         print_slow(
-            f"{Fore.YELLOW}                   You wanna play a game of Hangman?{Style.RESET_ALL}\n"
-        )
+            f"{Fore.YELLOW}                   You wanna play a game of "
+            f"Hangman?{Style.RESET_ALL}\n")
         print()
         print(
-            "Hangman Rules: The computer makes up a word and You try to guess it.  The word to guess is represented by a row of dashes, one for each letter.  You guess a letter by typing it and press Enter.  If the guessed letter is in the word, the dashes are replaced with the letter.  If you guessed wrong, a part of the hangman is drawn.  You continue to guess until you guessed the whole word or make too many incorrect guesses.  The game ends when the word is guessed correctly or the hangman is fully drawn.\n"
-        )
+            "Hangman Rules: The computer makes up a word and You try to "
+            "guess it. The word to guess is represented by a row of "
+            "dashes, one for each letter. You guess a letter by typing "
+            "it and press Enter. If the guessed letter is in the word, "
+            "the dashes are replaced with the letter. If you guessed "
+            "wrong, a part of the hangman is drawn. You continue to "
+            "guess until you guessed the whole word or make too many "
+            "incorrect guesses. The game ends when the word is guessed"
+            "correctly or the hangman is fully drawn.\n")
         print()
-        choice = input(
-            f"{Fore.YELLOW}          Please press 'p' to play a game or 'q' to leave the game{Style.RESET_ALL}\n"
-        ).lower()
+        choice = input(f"{Fore.YELLOW}          Please press 'p' to play a game or 'q' "
+                       f"to leave the game{Style.RESET_ALL}\n").lower()
 
         if choice == "p":
             while True:
-                player_name = input(
-                    f"{Fore.YELLOW}              Hi, glad you chose to play. Please enter your name: {Style.RESET_ALL}\n"
-                )
+                player_name = input(f"{Fore.YELLOW}              Hi, glad you chose to "
+                                    f"play. Please enter your name: {Style.RESET_ALL}\n")
                 # Checks so the player enters a valid name
                 if len(player_name) >= 2 and player_name.isalpha():
                     print()
-                    print(
-                        f"{Fore.BLUE}---------------------------------------------------------------------\n"
-                    )
-                    print(
-                        f"Hello {player_name}! Let's start the game, chose a letter...{Style.RESET_ALL}\n"
-                    )
+                    print(f"{Fore.BLUE}------------------------------------------------"
+                          "---------------------\n")
+                    print(f"Hello {player_name}! Let's start the game, chose a letter.."
+                          f"{Style.RESET_ALL}\n")
                     return True
                 else:
                     print(
-                        f"{Fore.RED}Invalid name. Please enter at least two letters, using only alphabetic characters.{Style.RESET_ALL}"
-                    )
+                        f"{Fore.RED}Invalid name. Please enter at least two letters, "
+                      f"using only alphabetic characters.{Style.RESET_ALL}")
         elif choice == "q":
-            print(
-                f"{Fore.BLUE}--------------------------------------------------------------------------"
-            )
+            print(f"{Fore.BLUE}------------------------------------------------------"
+                  "--------------------")
             print()
             print("                                      \|/ ")
             print("                                    ^-O-O-^ ")
-            print(
-                "----------------------------------ooO--U--Ooo------------------------------\n"
-            )
-            print(f".                 Ok, thanks for visiting, have a great day!")
+            print("----------------------------------ooO--U--Ooo---------------------"
+                  "---------\n")
+            print("                 Ok, thanks for visiting, have a great day!")
             print()
             print(
-                f"---------------------------------------------------------------------------{Style.RESET_ALL}\n"
-            )
+                f"-------------------------------------------------------------------"
+              f"--------{Style.RESET_ALL}\n")
 
         else:
-            print(
-                "Invalid choice, please enter 'p' start the game or 'q' to quit the game \n"
-            )
+            print("Invalid choice, please enter 'p' start the game or 'q' to quit "
+                  "the game \n")
             return start_game()
 
     """
-    Here the game starts and the random word is chosen, the player get to chose letter etc
+    Here the game starts and the random word is 
+    chosen, the player get to chose letter etc
     """
     if start_game():
         answer = random.choice(dictionary.words)
@@ -132,10 +128,11 @@ while True:
             if len(guessed_letters) > 0:
                 print()
                 print(
-                    f"{Fore.BLUE}________________________________________________________________________________"
-                )
+                    f"{Fore.BLUE}_________________________________________________"
+                  "_______________________________")
                 print("Oops, wrong letter...")
-                print(f"\nWrong guesses so far: {Style.RESET_ALL}", guessed_letters_str)
+                print(f"\nWrong guesses so far: {Style.RESET_ALL}",
+                      guessed_letters_str)
                 print()
 
             # Printing out the picture of hangman if guess is wrong
@@ -153,15 +150,15 @@ while True:
             if len(guess) == 1 and guess.isalpha():
                 # Check if the guessed letter has already been guessed
                 if guess.lower() in guessed_letters or guess in word:
-                    print(
-                        f"\n{Fore.RED}You already guessed '{guess.lower()}', try a different letter!{Style.RESET_ALL}\n"
-                    )
-                    continue  # Skip the rest of the loop and prompt the user to guess again
+                    print(f"\n{Fore.RED}You already guessed '{guess.lower()}', "
+                          f"try a different letter!{Style.RESET_ALL}\n")
+                    # Skip the rest of the loop and prompt the user to guess again
+                    continue  
 
                 # Keep the wrong guesses
                 wrong_guesses = True
 
-                """ 
+                """
                 Checks if the guessed letter is in the random word
                 """
                 i = 0
@@ -175,33 +172,26 @@ while True:
                 if wrong_guesses:
                     guessed_letters.append(guess.lower())
 
-                    guessed_letters_str = " ".join(
-                        f"{Fore.YELLOW}{g}{Style.RESET_ALL}" for g in guessed_letters
-                    )
+                    guessed_letters_str = " ".join(f"{Fore.YELLOW}{g}{Style.RESET_ALL}"
+                                                   for g in guessed_letters)
 
                 if guess in word:
-                    print(
-                        f"\n{Fore.GREEN}Great Guess, keep em coming!{Style.RESET_ALL}\n"
-                    )
+                    print(f"\n{Fore.GREEN}Great Guess, keep em coming!"
+                    f"{Style.RESET_ALL}\n")
 
             else:
-                print(
-                    "_________________________________________________________________"
-                )
-                print(
-                    f"{Fore.RED}Invalid choice, please enter a letter{Style.RESET_ALL}"
-                )
+                print("______________________________________________________________"
+                      "___")
+                print(f"{Fore.RED}Invalid choice, please enter a letter"
+                f"{Style.RESET_ALL}")
 
             if not "_ " in word:
                 game_over = True
-                print(
-                    f"{Fore.YELLOW}_________________________________________________________________\n"
-                )
-                print(
-                    "\nYay, you made it... you guessed the correct word which was "
+                print(f"{Fore.YELLOW}________________________________________________"
+                      "___________________\n")
+                print("\nYay, you made it... you guessed the correct word which was "
                     + "".join(answer).upper()
-                    + " Great job!!"
-                )
+                    + " Great job!!")
                 print()
                 print("               ,,, ")
                 print("              (o o) ")
@@ -209,8 +199,8 @@ while True:
             elif len(guessed_letters) == len(hangman.hangmans) - 1:
                 game_over = True
                 print(
-                    f"{Fore.RED}________________________________________________________________\n"
-                )
+                    f"{Fore.RED}______________________________________________________"
+                  "__________\n")
                 print("\nSorry, you lost... The word was: " + "".join(answer).upper())
                 print()
                 print("       \|||/ ")
@@ -221,9 +211,8 @@ while True:
         if not play_again():
             print()
             print()
-            print(
-                f"{Fore.BLUE}___________________________________________________________________________\n"
-            )
+            print(f"{Fore.BLUE}________________________________________________________"
+                  "___________________\n")
             print("                   Thank you for playing, see you soon again!!!\n")
             print()
             print("                                     \|/ ")
@@ -232,6 +221,6 @@ while True:
             print()
             print()
             print(
-                f"______________________________________________________________________________{Style.RESET_ALL}"
-            )
+                f"______________________________________________________________________"
+              f"________{Style.RESET_ALL}")
             break  # Exit the loop if they player chose to end

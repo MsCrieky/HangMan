@@ -29,16 +29,16 @@ To ensure a seamless and engaging experience, a comprehensive flowchart was meti
 
 ![FlowChart](images/Flowchart.png)
 
-Code Architecture
+- Code Architecture:
 The game's logic is elegantly structured to handle player inputs, track guessed letters, and manage the progression of the hangman's fate. Each decision point in the game is thoughtfully orchestrated, providing an immersive and intuitive gameplay flow.
 
-Random Word Selection
+- Random Word Selection:
 The heart of Hangman lies in its words. A carefully curated list of diverse and intriguing words ensures that each game is a unique challenge. The logic for selecting a random word is designed to keep players on their toes, ready to unravel the mystery.
 
-User Interaction
+- User Interaction:
 User interaction is a key focus. The game prompts players for their name, guides them through the rules, and allows them to make guesses. The code is crafted to handle various scenarios, ensuring a user-friendly and enjoyable experience.
 
-Error Handling
+- Error Handling:
 To enhance robustness, the code incorporates error handling. Whether a player enters an invalid name, guesses a previously guessed letter, or inputs a non-alphabetic character, the game responds gracefully, guiding the player back on track.
 
 In essence, the logic and planning behind the Hangman game aim to deliver not just a game but an immersive journey into the realm of words and wit. With every line of code, thoughtful consideration has been given to create an experience that is both challenging and enjoyable. May your exploration of Hangman be filled with suspense, triumphs, and the occasional unraveling of mysteries!
@@ -115,6 +115,7 @@ Should I Stay or Should I Go:
 
 ## Technologies Used
 
+
 - Python
 
 ## Frameworks, Libraries, Modules & Programs Used
@@ -139,6 +140,7 @@ Should I Stay or Should I Go:
 
 ## Testing
 
+
 Lighthouse
 
 Lighthouse was used to test Performance
@@ -151,6 +153,7 @@ Manual Testing
 
 
 ## Deployment
+
 
 Deploying and Interacting with this Project
 
@@ -195,6 +198,7 @@ The live link to HangMan: https://malins-hangman-pp3-af4a9d9cbd8a.herokuapp.com/
 
 ## Credits
 
+
 Code
 
 - Understanding the concept of Python has been a challenging task and I found a lot of help in freeCodeCamp as well as in Bro Codes YouTube channel.
@@ -211,7 +215,9 @@ ASCII are taken from:
 - patorjk.com
 - asciiart.eu 
 
+
 ## Acknowledgements
+
 
 - Slack community has been a great resource for help and ideas.
 - My mentor Mitko Bachvarov has provided me with good links to helpful websites and gently guided me with good feedback.
