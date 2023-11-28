@@ -70,4 +70,16 @@ The Winner Takes It All:
 
 - The climax of triumph unfolds on the screen as the player successfully guesses the entire word, emerging as the Hangman victor. The console beams with congratulations, revealing the concealed word in its entirety. A vibrant display of celebratory messages acknowledges the player's skillful deduction and brings the gaming journey to a satisfying conclusion.
 
-1[You Win](images/You_Win.png)
+![You Win](images/You_Win.png)
+
+The Looser Standing Small:
+
+- Oh no! The gallows stand complete, the hangman is fully drawn. Darkness descends as the correct word eludes you. The echoes of defeat reverberate through the silence. But fear not, for another challenge awaits. Will you rise from the ashes and conquer the next round?
+
+![You Lose](images/You_Lose.png)
+
+Should I Stay or Should I Go:
+
+- As you choose to depart, the hangman's shadow lingers. A choice made to step away from the enigmatic challenge. Until we meet again, the lingering mysteries remain unsolved. Until next time, brave soul. May your adventures be many.
+
+![Quit](images/Q_Choice.png)
