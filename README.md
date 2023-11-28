@@ -23,7 +23,7 @@ Before diving into the world of Hangman, let's explore the meticulous planning a
 Game Flowchart
 To ensure a seamless and engaging experience, a comprehensive flowchart was meticulously crafted. This visual representation outlines the game's decision-making process, from the player's entry to the triumphant victory or unfortunate defeat.
 
-![FlowChart](images/Hangman%20(1).pdf)
+![FlowChart](images/Flowchart.png
 
 Code Architecture
 The game's logic is elegantly structured to handle player inputs, track guessed letters, and manage the progression of the hangman's fate. Each decision point in the game is thoughtfully orchestrated, providing an immersive and intuitive gameplay flow.
