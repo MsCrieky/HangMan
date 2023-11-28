@@ -115,9 +115,7 @@ Should I Stay or Should I Go:
 
 ## Technologies Used
 
-- [HTML5](https://en.wikipedia.org/wiki/HTML5)
-- [CSS3](https://en.wikipedia.org/wiki/CSS)
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- Python
 
 ## Frameworks, Libraries, Modules & Programs Used
 
@@ -131,21 +129,69 @@ Should I Stay or Should I Go:
   - Time, sleep module to delay text print-out.
   - Colorama, for different colors on text and ascii
   - Random, for a random choice in word list
+- Heroku
+  - For creating the console and deploying the project.
+- Lucidchart
+  - Used to create the flowchart
+- Patorjk
+  - Was used to draw the game logo (ASCII Art Generator)
 
 
 ## Testing
 
-![Lighthouse]
+Lighthouse
+
+Lighthouse was used to test Performance
+
+![Lighthouse](images/Lighthouse.png)
 
 Manual Testing
 
 
 
+
 ## Deployment
 
+Deploying and Interacting with this Project
 
+Deploying on Heroku
+
+This project was deployed on Heroku by completing the following steps:
+* Log in to Heroku or create a new account.
+* On the main page, click the "New" button in the top right corner, and from the drop-down menu, select "Create New App."
+* Enter a unique app name and select your desired region.
+* Click the "Create App" button.
+* In the project’s Deploy Tab, navigate to the Settings Tab, scroll down to Config Vars.
+* Click "Reveal Config Vars," enter "port" into the Key box, "8000" into the Value box, and click the "Add" button.
+* Repeat step 6, adding "CREDS" into the Key box and the Google credentials into the Value box.
+* Scroll down to the Buildpack section, click "Add Buildpack," select "python," and click "Save Changes."
+* Repeat step 8 to add "node.js." Note: Ensure the Buildpacks are in the correct order; if not, click and drag them into the correct sequence.
+* Navigate to the Deploy tab, select "GitHub" as the deployment method, confirm the connection to GitHub, and search for the repository name. Click the "connect" button.
+* Scroll to the bottom of the deploy page and choose the preferred deployment type.
+* Click either "Enable Automatic Deploys" for automatic deployment when pushing updates to GitHub.
+
+
+Forking This Project
+
+Forking this project, follow these simple steps:
+* Open GitHub.
+* Click on the project you wish to fork.
+* Locate the "Fork" button at the top right of the page.
+* Click the "Fork" button, and the project will be added to your repository.
+
+Cloning This Project
+
+Clone this project using these steps:
+* Open GitHub.
+* Click on the project you want to clone.
+* You will be provided with three options: HTTPS, SSH, or GitHub CLI. Click the clipboard icon to copy the URL.
+* Open a new terminal.
+* Change the current working directory to your desired location.
+* Type git clone and paste the URL copied in step 3.
+* Press Enter, and voila, the project is cloned and ready for exploration!
 
 The live link to HangMan: https://malins-hangman-pp3-af4a9d9cbd8a.herokuapp.com/ 
+
 
 ## Credits
 
