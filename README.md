@@ -113,12 +113,20 @@ Should I Stay or Should I Go:
 ![Quit](images/Q_Choice.png)
 
 
+## Future Ideas
+
+
+- Clear screen in between guesses for a better look on screen
+
+
 ## Technologies Used
 
 
 - Python
 
+
 ## Frameworks, Libraries, Modules & Programs Used
+
 
 - Github
   - Deployment of the website and storing the files online.
@@ -149,7 +157,21 @@ Lighthouse was used to test Performance
 
 Manual Testing
 
+- Went through the code from start to end multiple times to see what I saw and fixed bugs I saw
+- Played the game several times to see so everything worked, including:
+  - Invalid input of name (minimum of two letters required)
+  - Invalid letter choice (no symbols or numbers)
+  - Not possible to enter the same letter twice
 
+
+Bugs
+
+- Had quite a few issues with to long code, so used the (" ") method to split lines
+- Trailing spaces
+- Changed all to lower case letters
+- Had difficulty getting Colorama to work, until I put it in the Requirements.txt
+- Fixed so the empty word got spacing in between for a better view
+- 
 
 
 ## Deployment
