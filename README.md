@@ -1,5 +1,7 @@
 # HangMan Game
 
+[Live Page Here](https://malins-hangman-pp3-af4a9d9cbd8a.herokuapp.com/)
+
 ## Introduction
 
 
@@ -24,7 +26,7 @@ This console-based Hangman game is a simple yet entertaining way to challenge yo
 
 Before diving into the world of Hangman, let's explore the meticulous planning and logical structure that lay the foundation for this captivating game.
 
-Game Flowchart
+- Game Flowchart
 To ensure a seamless and engaging experience, a comprehensive flowchart was meticulously crafted. This visual representation outlines the game's decision-making process, from the player's entry to the triumphant victory or unfortunate defeat.
 
 ![FlowChart](images/Flowchart.png)
@@ -176,7 +178,7 @@ Code Checker
  - I used Code institues "CI Python Linter" for checking my code, and it went through without any errors.
 
  ![Ci Python Linter](images/Ci_Python_Linter.png)
- 
+
 
 ## Deployment
 

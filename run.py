@@ -69,7 +69,7 @@ while True:
             "incorrect guesses. The game ends when the word is guessed "
             "correctly or the hangman is fully drawn.\n")
         print()
-        choice = input(f"{Fore.YELLOW}          Please press 'p' to play a"
+        choice = input(f"{Fore.YELLOW}          Please press 'p' to play a "
                        "game or 'q' to leave the game"
                        f"{Style.RESET_ALL}\n").lower()
 
