@@ -122,7 +122,7 @@ Should I Stay or Should I Go:
 ## Technologies Used
 
 
-- Python
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 
 ## Frameworks, Libraries, Modules & Programs Used
@@ -172,6 +172,11 @@ Bugs
 - Had difficulty getting Colorama to work, until I put it in the Requirements.txt
 - Fixed so the empty word got spacing in between for a better view
 
+Code Checker
+ - I used Code institues "CI Python Linter" for checking my code, and it went through without any errors.
+
+ ![Ci Python Linter](images/Ci_Python_Linter.png)
+ 
 
 ## Deployment
 
