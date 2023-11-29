@@ -1,4 +1,18 @@
-# Asks the player at the end of the game if he wants to play another game.
+logo = """
+ __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.
+|  |  |  |     /  \\     | \\ |  |  /  _____||  \\/   |     /  \\     | \\ |  |
+|  |__|  |    /  ^ \\    |  \\|  | |  |  __  | \\  /  |    /  ^ \\    |  \\|  |
+|   __   |   /  /_\\\\   |  . `  | |  | |_ | | |\\/|  |   /  /\\ \\   |  . `  |
+|  |  |  |  /  _____ \\  |  |\\  | |  |__| | |  |  |  |  /  _____ \\  |  |\\  |
+|__|  |__| /__/    \\_\\ |__|\\__| \\______| |__|  |__| /__/    \\_\\ |__|\\__|
+"""
+
+
+"""
+Asks the player at the end of the game if he wants to play again.
+"""
+
+
 def play_again():
     while True:
         user_input = input("Do you fancy another game? (y/n)").lower()
@@ -18,6 +32,9 @@ while True:
     from colorama import Fore, Back, Style  # Adds colors
     import time  # Add delay to print out text
 
+    """
+    Prints out the ascii and text on startscreen with delay
+    """
     def print_slow(text, speed=0.005):
         for character in text:
             print(character, end="", flush=True)
@@ -26,24 +43,12 @@ while True:
 
     # Welcoming ASCii art
     print_slow(f"{Fore.YELLOW}Welcome to: \n")
-    print_slow("    __    __     ___    .__   __.  ______ .___  ___.    ___  "
-               "   .__   __.")
-    print_slow("   |  |  |  |   /   \   |  \ |  | /  ____||   \/   |   /   \ "
-               "   |  \ |  |")
-    print_slow("   |  |__|  |  /  ^  \  |   \|  ||  |  __ |  \  /  |  /  ^  "
-               "\   |   \|  |")
-    print_slow("   |   __   | /  /_\  \ |  . `  |   | |_ ||  |\/|  | /  /_\  "
-               "\  |  . `  |")
-    print_slow("   |  |  |  |/  _____  \|  |\   ||  |__| ||  |  |  |/  _____ "
-               " \ |  |\   |")
-    print_slow("   |__|  |__|__/     \__|__| \__| \______||__|  |__|__/     "
-               f" \__|__| \__|{Style.RESET_ALL}")
+    print_slow(f"{Fore.YELLOW}{logo}{Style.RESET_ALL}")
 
     """
     Start function of the game which lets
     the player select to play or to quit the game
     """
-
     def start_game():
         print()
         print(
@@ -89,7 +94,7 @@ while True:
             print(f"{Fore.BLUE}----------------------------------------------"
                   "----------------------------")
             print()
-            print("                                      \|/ ")
+            print(r"                                      \|/ ")
             print("                                    ^-O-O-^ ")
             print("----------------------------------ooO--U--Ooo-------------"
                   "-----------------\n")
@@ -111,7 +116,7 @@ while True:
         answer = random.choice(dictionary.words)
         answer = list(answer)
 
-        game_ove = False
+        game_over = False
 
         # Creates an empty word
         word = []
@@ -186,7 +191,7 @@ while True:
                 print(f"{Fore.RED}Invalid choice, please enter a letter"
                       f"{Style.RESET_ALL}")
 
-            if not "_ " in word:
+            if "_ " not in word:
                 game_over = True
                 print(f"{Fore.YELLOW}________________________________________"
                       "___________________________\n")
@@ -205,7 +210,7 @@ while True:
                 print("\nSorry, you lost... The word was: "
                       + "".join(answer).upper())
                 print()
-                print("       \|||/ ")
+                print(r"       \|||/ ")
                 print("       (o o) ")
                 print(f"----ooO-(_)-Ooo----{Style.RESET_ALL}\n")
 
@@ -218,7 +223,7 @@ while True:
             print("                   Thank you for playing, see you soon "
                   "again!!!\n")
             print()
-            print("                                     \|/ ")
+            print(r"                                     \|/ ")
             print("                                   ^-O-O-^ ")
             print("                            -----ooO--U--Ooo-----\n")
             print()
