@@ -1,16 +1,18 @@
 logo = """
- __    __       ___     .__   __.   _______.___  ___.      ___     .__   __.
-|  |  |  |     /   \\     | \\ |  |  /  _____||  \\/   |     /   \\     | \\ |  |
-|  |__|  |    /  ^  \\    |  \\|  | |  |  __  | \\  /  |    /  ^  \\    |  \\|  |
-|   __   |   /  /_\\  \\   |  .`  | |  | |_ | | |\\/|  |   /  /_\\  \\   |  .`  |
-|  |  |  |  /  _____  \\  |  |\\  | |  |__| | | |  |  |  /  _____  \\  |  |\\  |
-|__|  |__| /__/     \\__\\ |__| \\_|  \\______| |_|  |__| /__/     \\__\\ |__| \\_|
+ __    __      ___     .__   __.   _______.___  ___.     ___   .__   __.
+|  |  |  |    /   \\     | \\ |  |  /  _____||  \\/   |    /   \\   | \\ |  |
+|  |__|  |   /  ^  \\    |  \\|  | |  |  __  | \\  /  |   /  ^  \\  |  \\|  |
+|   __   |  /  /_\\  \\   |  .`  | |  | |_ | | |\\/|  |  /  /_\\  \\ |  .`  |
+|  |  |  | /  _____  \\  |  |\\  | |  |__| | | |  |  | /  _____  \\|  |\\  |
+|__|  |__|/__/     \\__\\ |__| \\_|  \\______| |_|  |__|/__/     \\__|__| \\_|
 """
 
 
 """
 Asks the player at the end of the game if he wants to play again.
 """
+
+
 def play_again():
     while True:
         user_input = input("Do you fancy another game? (y/n)").lower()
@@ -125,9 +127,6 @@ while True:
                 word.append("_ ")
 
         guessed_letters = []
-        guessed_letters_str = " ".join(f"{Fore.YELLOW}{g}"
-                                       f"{Style.RESET_ALL}"
-                                       for g in guessed_letters)
 
         # Print out made guesses
         while not game_over:
@@ -177,6 +176,10 @@ while True:
                 # Put wrong guesses in a list
                 if wrong_guesses:
                     guessed_letters.append(guess.lower())
+
+                guessed_letters_str = " ".join(f"{Fore.YELLOW}{g}"
+                                               f"{Style.RESET_ALL}"
+                                               for g in guessed_letters)
 
                 if guess in word:
                     print(f"\n{Fore.GREEN}Great Guess, keep em coming!"
