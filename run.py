@@ -60,13 +60,13 @@ while True:
         print()
         print(
             "Hangman Rules: The computer makes up a word and You try to "
-            "guess it. The word to guess is represented by a row of "
+            "guess it. The word toguess is represented by a row of "
             "dashes, one for each letter. You guess a letter by typing "
             "it and press Enter. If the guessed letter is in the word, "
             "the dashes are replaced with the letter. If you guessed "
             "wrong, a part of the hangman is drawn. You continue to "
             "guess until you guessed the whole word or make too many "
-            "incorrect guesses. The game ends when the word is guessed"
+            "incorrect guesses. The game ends when the word is guessed "
             "correctly or the hangman is fully drawn.\n")
         print()
         choice = input(f"{Fore.YELLOW}          Please press 'p' to play a"
@@ -75,7 +75,7 @@ while True:
 
         if choice == "p":
             while True:
-                player_name = input(f"{Fore.YELLOW}              Hi, glad you"
+                player_name = input(f"{Fore.YELLOW}              Hi, glad you "
                                     f"chose to play. Please enter your name: "
                                     f"{Style.RESET_ALL}\n")
                 # Checks so the player enters a valid name
@@ -83,11 +83,11 @@ while True:
                     print()
                     print(f"{Fore.BLUE}--------------------------------------"
                           "-------------------------------\n")
-                    print(f"Hello {player_name}! Let's start the game, chose a"
+                    print(f"Hello {player_name}! Let's start the game, chose a "
                           f"letter..{Style.RESET_ALL}\n")
                     return True
                 else:
-                    print(f"{Fore.RED}Invalid name. Please enter at least two"
+                    print(f"{Fore.RED}Invalid name. Please enter at least two "
                           f"letters, using only alphabetic characters."
                           f"{Style.RESET_ALL}")
         elif choice == "q":
@@ -104,7 +104,7 @@ while True:
                   f"----------------{Style.RESET_ALL}\n")
 
         else:
-            print("Invalid choice, please enter 'p' start the game or 'q' to"
+            print("Invalid choice, please enter 'p' start the game or 'q' to "
                   "quit the game \n")
             return start_game()
 
