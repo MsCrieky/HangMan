@@ -171,7 +171,6 @@ Bugs
 - Changed all to lower case letters
 - Had difficulty getting Colorama to work, until I put it in the Requirements.txt
 - Fixed so the empty word got spacing in between for a better view
-- 
 
 
 ## Deployment
